@@ -1,0 +1,119 @@
+/* MODIP Questionnaire Fixes */
+
+/* --- Layout Fixes (Scoped) --- */
+body.modip-fix-enabled .table-bordered {
+    border: 1px solid #888 !important;
+}
+
+body.modip-fix-enabled .table-bordered>tbody>tr>td,
+body.modip-fix-enabled .table-bordered>tbody>tr>th,
+body.modip-fix-enabled .table-bordered>tfoot>tr>td,
+body.modip-fix-enabled .table-bordered>tfoot>tr>th,
+body.modip-fix-enabled .table-bordered>thead>tr>td,
+body.modip-fix-enabled .table-bordered>thead>tr>th {
+    border-color: #ccc !important;
+    vertical-align: middle !important;
+}
+
+body.modip-fix-enabled .table-bordered>tbody>tr>td {
+    border-bottom: 1px solid #aaa !important;
+}
+
+/* Zebra Striping */
+body.modip-fix-enabled .table-bordered>tbody>tr:nth-of-type(odd) {
+    background-color: #f7f7f7;
+}
+
+body.modip-fix-enabled .table-bordered>tbody>tr:nth-of-type(even) {
+    background-color: #ffffff;
+}
+
+/* Hover Effect */
+body.modip-fix-enabled .table-bordered>tbody>tr:hover {
+    background-color: #dbeaff !important;
+    transition: background-color 0.1s ease;
+}
+
+/* Input Alignment */
+body.modip-fix-enabled input[type="radio"],
+body.modip-fix-enabled input[type="checkbox"] {
+    margin: 4px auto !important;
+    display: block;
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+/* Cell Alignment */
+body.modip-fix-enabled .table-bordered td {
+    text-align: center;
+}
+
+body.modip-fix-enabled .table-bordered td.description,
+body.modip-fix-enabled .table-bordered td:first-child {
+    text-align: left !important;
+    padding-left: 15px !important;
+    font-weight: 500;
+}
+
+/* Header */
+body.modip-fix-enabled .table-bordered thead th {
+    background-color: #e0e0e0;
+    color: #333;
+    font-weight: bold;
+    border-bottom: 2px solid #999 !important;
+}
+
+/* Separator Lines (HR) */
+body.modip-fix-enabled hr {
+    border: 0 !important;
+    border-top: 2px solid #222 !important;
+    height: 0 !important;
+    opacity: 1 !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Remove Faint Borders in Nested Tables */
+body.modip-fix-enabled .table.borderless,
+body.modip-fix-enabled .table.borderless>thead>tr>th,
+body.modip-fix-enabled .table.borderless>thead>tr>td,
+body.modip-fix-enabled .table.borderless>tbody>tr>th,
+body.modip-fix-enabled .table.borderless>tbody>tr>td,
+body.modip-fix-enabled .table.borderless>tfoot>tr>th,
+body.modip-fix-enabled .table.borderless>tfoot>tr>td {
+    border: none !important;
+}
+
+
+/* --- Accessibility Features (Scoped) --- */
+
+/* Larger Question Numbers */
+body.modip-a11y-enabled .modip-q-num {
+    font-size: 1.5em !important;
+    /* 1.5x normal size */
+    font-weight: 900 !important;
+    color: #000 !important;
+    margin-right: 8px !important;
+    display: inline-block !important;
+}
+
+/* Larger/Bolder Question Text */
+body.modip-a11y-enabled .description,
+body.modip-a11y-enabled td.description,
+body.modip-a11y-enabled div.description {
+    font-size: 16px !important;
+    /* Explicit pixel/rem size often safer than em inheritance */
+    font-weight: 700 !important;
+    /* Bold */
+    line-height: 1.5 !important;
+    color: #000 !important;
+}
+
+/* Vertically Aligned Headers/Labels (User Request) */
+body.modip-a11y-enabled td[style*="vertical-align: middle"] div[style*="text-align: center"] {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #000 !important;
+}

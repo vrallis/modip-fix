@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "MODIP Fixer",
+    "version": "1.0",
+    "description": "Διορθώνει προβλήματα ευθυγράμμισης, ορατότητας και προσβασιμότητας των ερωτηματολογίων modip.",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "assets/logo.png",
+            "48": "assets/logo.png",
+            "128": "assets/logo.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://evaluate.modip.uoi.gr/*"
+            ],
+            "css": [
+                "content.css"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
